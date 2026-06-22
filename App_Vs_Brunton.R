@@ -159,7 +159,7 @@ analizar_dataset <- function(data, sufijo){
       theme_bw() + theme(axis.title = element_text(size = 9)) + 
       labs(title=paste("A. Bland-Altman -", titulo), x=l_m, y=l_d, color = "Modelo celular")
     
-    # B. Concordancia (Limpio y purgado para el artículo)
+    # B. Concordancia 
     p2 <- ggplot(data, aes(x = !!xt, y = !!yo, color = modelo)) +
       geom_point(alpha = 0.5) +
       geom_abline(slope = 1, intercept = 0, linetype = "dashed") +
@@ -177,7 +177,7 @@ analizar_dataset <- function(data, sufijo){
       theme(axis.text.x = element_blank(), axis.ticks.x = element_blank()) + theme(axis.title = element_text(size = 9)) + 
       labs(title=paste("C. Variabilidad del Error -", titulo), x="Diagramas de caja", y=l_d, fill = "Modelo celular")
     
-    # D. Curvas de Densidad Suavizadas (Sincronización perfecta de leyenda y curvas)
+    # D. Curvas de Densidad Suavizadas 
     p4 <- ggplot(data, aes(x = !!yd, fill = modelo, color = modelo)) +
       geom_density(alpha = 0.3, linewidth = 0.8) +
       theme_bw() + 
@@ -222,14 +222,14 @@ tit_con_dip <- wrap_elements(panel = ggplot() +
                                theme_void() + 
                                theme(plot.title = element_text(size = 11, face = "bold", color = "darkred", hjust = 0.5, vjust = 1)))
 
-# El truco: A los títulos de la derecha les forzamos una escala de color idéntica pero invisible para igualar los márgenes de la leyenda
+# Títulos de la derecha 
 tit_con_dir <- wrap_elements(panel = ggplot(df_con, aes(x=1, y=1, color=modelo)) + 
                                labs(title = "ANÁLISIS CON OUTLIERS: DIRECCIÓN DE BUZAMIENTO (DIPDIR)") + 
                                scale_color_discrete(guide = "none") + # Genera el espacio de la leyenda en invisible
                                theme_void() + 
                                theme(plot.title = element_text(size = 11, face = "bold", color = "darkred", hjust = 0.5, vjust = 1)))
 
-# Unimos los dos títulos superiores horizontalmente
+# Títulos superiores unidos horizontalmente
 fila_tit_con <- tit_con_dip | tit_con_dir
 graf_con <- res_con$dip | res_con$dir
 
@@ -246,17 +246,17 @@ tit_sin_dir <- wrap_elements(panel = ggplot(df_sin, aes(x=1, y=1, color=modelo))
                                theme_void() + 
                                theme(plot.title = element_text(size = 11, face = "bold", color = "darkblue", hjust = 0.5, vjust = 1)))
 
-# Unimos los dos títulos intermedios horizontalmente
+# Títulos intermedios unidoshorizontalmente
 fila_tit_sin <- tit_sin_dip | tit_sin_dir
 graf_sin <- res_sin$dip | res_sin$dir
 
 
 # --- 3. COMPOSICIÓN MATRICIAL FINAL ---
-# Mantenemos tu escala original de 18x12 y pesos de franja exactos
+# Mantenemos escala original de 18x12 y pesos de franja exactos
 fig_final <- fila_tit_con / graf_con / fila_tit_sin / graf_sin + 
   plot_layout(heights = c(0.06, 1, 0.06, 1))
 
-# Guardamos el archivo con tus dimensiones originales exactas
+# Guardamos el archivo con  dimensiones s exactas
 ggsave("FIGURA_COMPARATIVA_TOTAL.png", fig_final, width=18, height=12)
 
 cat("\nANÁLISIS CON Y SIN OUTLIERS COMPLETO\n")
