@@ -9,8 +9,8 @@ El algoritmo ejecuta un análisis metrológico multivariante completo de forma a
 Para ejecutar el análisis de manera independiente para cada escenario del artículo, usted debe preparar **dos archivos CSV distintos** en su directorio de trabajo, asegurando que las columnas coincidan exactamente con lo requerido por el script. Revise los achivos utilizados en el artículo.
 
 ### 1. Archivos de Entrada Requeridos
-* **`Datos_estructurales_numerados.csv`**: Corresponde al **Escenario 1 (Mono-operador)**. Contiene las mediciones secuenciales controladas sobre 10 planos (160 registros) fijos para evaluar la precisión intrínseca del hardware.
-* **`Datos_estructurales_aleatorios.csv`**: Corresponde al **Escenario 2 (Multi-operador)**. Contiene los 160 registros aleatorios capturados por múltiples profesionales para evaluar la reproducibilidad e incertidumbre operativa.
+* **`Datos_estructurales_numerados.csv`**: Corresponde al **Escenario 1 (Mono-operador)**. Contiene las mediciones secuenciales controladas sobre 10 planos fijos (un gran total de 50 registros en la matriz base) para aislar y evaluar la precisión intrínseca del hardware.
+* **`Datos_estructurales_aleatorios.csv`**: Corresponde al **Escenario 2 (Multi-operador)**. Contiene la base de datos con los 80 registros aleatorios capturados por múltiples profesionales en campo para evaluar la reproducibilidad e incertidumbre operativa inter-usuario.
 
 ### 2. Formato Obligatorio de las Columnas (CSV)
 Ambos archivos deben tener la misma estructura matricial. El script normaliza automáticamente los encabezados a minúsculas, por lo que solo debe asegurarse de incluir estas columnas:
