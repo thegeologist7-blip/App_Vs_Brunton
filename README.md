@@ -48,6 +48,8 @@ Tras presionar Run, el algoritmo procesará el archivo asignado y guardará auto
 
     FIGURA_COMPARATIVA_TOTAL.png: Mosaico gráfico compuesto de alta resolución (18×12 pulgadas) que integra los paneles de Bland-Altman (A), Concordancia (B), Diagramas de caja de variabilidad del error (C) y Curvas de densidad de probabilidad (D).
 
-📄 Licencia
+## 📄 Licencia y Autoría
 
-Este software científico se distribuye bajo la licencia Creative Commons Attribution 4.0 International (CC-BY-4.0). Se permite su libre uso, modificación y distribución condicionado a la citación formal del artículo original y de este repositorio.
+Este software científico y su código fuente fueron desarrollados en su totalidad por **Byron Bravo-Granda** (© Byron Bravo). 
+
+El script se distribuye de forma abierta bajo la licencia **Creative Commons Attribution 4.0 International (CC-BY-4.0)**. Se permite su libre uso, adaptación y redistribución en otros frentes de investigación, condicionado estrictamente a la citación formal del artículo original y de este repositorio indexado en Zenodo.
