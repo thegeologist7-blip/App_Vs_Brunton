@@ -1,3 +1,16 @@
+# ==============================================================================
+# DATA REPOSITORIES AND REPRODUCIBLE SCIENCE - METROLOGICAL VALIDATION
+# ==============================================================================
+# Title: R script for metrological validation and multivariate statistical analysis 
+#        of structural geology data captured via mobile devices vs Brunton compasses.
+# Author: Byron Bravo-Granda
+# Institution: Instituto de Investigación Geológico y Energético (IIGE), Ecuador
+# Project: Structural orientation measurements validation under single and multi-operator settings.
+# Contact: thegeologist7@mail.com
+# Version: 1.0.0
+# License: Creative Commons Attribution 4.0 International (CC-BY-4.0)
+# ==============================================================================
+
 # =========================================================
 # VALIDACIÓN DE BRÚJULAS DIGITALES vs BRUNTON
 
